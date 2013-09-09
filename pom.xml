@@ -26,12 +26,35 @@
   <name>owb-rf TomEE Webapp</name>
   <url>http://tomee.apache.org</url>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-bom</artifactId>
+        <version>${richfaces.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.openejb</groupId>
       <artifactId>javaee-api</artifactId>
       <version>6.0-4</version>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.richfaces.ui</groupId>
+      <artifactId>richfaces-components-ui</artifactId>
+      <version>${richfaces.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.core</groupId>
+      <artifactId>richfaces-core-impl</artifactId>
+      <version>${richfaces.version}</version>
     </dependency>
 
     <!-- to test with TomEE and Arquillian
@@ -144,5 +167,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <richfaces.version>4.3.4-SNAPSHOT</richfaces.version>
   </properties>
 </project>

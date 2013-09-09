@@ -23,8 +23,9 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
-
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
 
 <h:body bgcolor="white">
     <f:view>
@@ -33,7 +34,7 @@
                 <h:outputText value='Enter book title'/>
                 <h:inputText value='#{bookBean.bookTitle}'/>
                 <h:outputText value='Add'/>
-                <h:commandButton action="#{bookBean.add}" value="Add"/>
+                <a4j:commandButton action="#{bookBean.add}" value="Add"/>
             </h:panelGrid>
         </h:form>
     </f:view>
